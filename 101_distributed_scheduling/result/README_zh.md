@@ -256,12 +256,67 @@ Deployment 一般是无状态服务, 即使需要持久化数据/Session, 设计
 
 ## 分布式调度器设计
 
-需要的功能点(不一定分多个组件):
+### 名称
+
+**vscheduler**
+
+### 需要的功能点(不一定分多个组件):
+
 - MutatingWebhook
 - Scheduler
 - Cache(Informers)
 - Node信号
 
-目前的思路是将Webhook和Scheduler做在一个main中, 减少需要部署的实际组件数量.
+### 实现思路
+
+目前的思路是将Webhook和Scheduler做在一个pod(main)中, 减少需要部署的实际组件数量.
 
 ![scheduler-design](statics/scheduler-design.png)
+
+### 用户配置对单个Workload的调度
+
+通过Label的方式来配置.
+
+```yaml
+# 开启/关闭 对 Workload 的调度, default: false
+vacant.io/optimize-scheduling=true
+vacant.io/optimize-scheduling=false
+
+# 调度模式(默认情况按前文提到的思路调度)
+# 全部在 on-demand
+vacant.io/optimize-scheduling-mode=all-in-on-demand
+# 全部在 spot
+vacant.io/optimize-scheduling-mode=all-in-spot
+# 一半以上在on-demand
+vacant.io/optimize-scheduling-mode=majority-in-on-demand
+# 自定义(必须配置vacant.io/optimize-scheduling-mode-custom-on-demand)
+vacant.io/optimize-scheduling-mode=custom
+
+# 自定义on-demand数量(mode必须是custom)
+vacant.io/optimize-scheduling-mode-custom-on-demand=3
+vacant.io/optimize-scheduling-mode-custom-on-demand=30%
+```
+
+注意: 需要 UPDATE event Webhook 来检查配置是否正确.
+
+### Pod Affinity配置与预期不一致如何处理
+
+这种情况可能会出现在:
+
+1. 在部署负载后, 部署 vscheduler, 这时负载已经在运行了.
+2. 用户修改了调度模式, 或是关闭了对workload的调度.
+3. Deployment 配置变更.
+
+处理思路:
+
+1. 将负载对应的Pod逐个Delete, 在 kube-cm 创建Pod后通过Webhook配置为需要的Affinity, 然后Pod被kube-scheduler调度.
+2. 执行Delete的Pod应是与预期Affinity不符的Pod, 比如有3个临时+2个按需, 但是我们要求2个临时+3个按需, 那只需要删除一个临时Pod即可.
+3. 执行Delete的前提是Workload目前是健康状态, 如果他某一些Pod因为一些原因没有到Running, 这时我们不应该去执行Delete, 按照这个思路就可以做到第一条的逐个Delete.
+
+### Webhook部分如何知道新的Pod要不要打, 以及打什么NodeAffinity
+
+这个问题关系到Scheduler和Webhook部分数据的共享.
+
+1. 让Scheduler和Webhook都持有同一份Cache模块
+2. (在Deployment关联的ReplicaSet)和(StatefulSet)的annotation中标注下一个Pod的NodeAffinity预期配置(如, on-demand/spot)
+3. 让Scheduler和Webhook都持有一个新的模块, 负责传递每一次Delete Pod相关信息, 如Scheduler决定Delete Deployment1的1个Pod, 并且转为on-demand, 那么对这个模块的channel传入一个"on-demand"
