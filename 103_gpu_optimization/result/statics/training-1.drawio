@@ -1,0 +1,206 @@
+<mxfile host="drawio-plugin" modified="2024-07-28T08:58:23.293Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" version="22.1.22" etag="twRdddkQ8aojZ30NFXj1" type="embed">
+  <diagram id="BImIExjyRrxSWB8z9mMG" name="Page-1">
+    <mxGraphModel dx="1174" dy="1934" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="225" y="-220" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="-210" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="-140" />
+              <mxPoint x="265" y="-140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="245" y="-200" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="Training Tasks" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=1;startSize=20;horizontalStack=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="-85" width="370" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="Input" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="14">
+          <mxGeometry y="20" width="370" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="Training Configuration" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="15">
+          <mxGeometry x="30" y="88" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="48" value="Container(image)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="15">
+          <mxGeometry x="30" y="10" width="170" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="Model Files" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="48">
+          <mxGeometry y="26" width="170" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="Datasets" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="48">
+          <mxGeometry y="52" width="170" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="Output" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="14">
+          <mxGeometry y="170" width="370" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Checkpoints" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="16">
+          <mxGeometry x="30" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="Trained Model" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="16">
+          <mxGeometry x="30" y="30" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Evaluation Report" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="16">
+          <mxGeometry x="30" y="60" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="more..." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="16">
+          <mxGeometry x="30" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="Cloud Storage" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="600" y="10" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="=" style="swimlane;startSize=20;horizontal=1;containerType=tree;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="230" width="1000" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.layered_rect;dx=10;outlineConnect=0;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="35">
+          <mxGeometry x="210" y="480" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="NVIDIA GPU&amp;nbsp;Nodes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="35">
+          <mxGeometry x="215" y="490" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="35" source="53" target="55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="35" source="53" target="64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="35" source="53" target="71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53" value="AI Workload Scheduler" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="35">
+          <mxGeometry x="295" y="40" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="55" value="Job1" style="swimlane;" vertex="1" parent="35">
+          <mxGeometry x="40" y="170" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="56" value="Type: MPI" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="55">
+          <mxGeometry y="28" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="57" value="Priority: 500" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="55">
+          <mxGeometry y="58" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="58" value="MaxReplicas: 50" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="55">
+          <mxGeometry y="88" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="59" value="MinReplicas: 10" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="55">
+          <mxGeometry y="118" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="62" value="AMD Support: false" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="55">
+          <mxGeometry y="148" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="63" value="Reduce Cost: false" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="55">
+          <mxGeometry y="178" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="64" value="Job1" style="swimlane;" vertex="1" parent="35">
+          <mxGeometry x="280" y="170" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="65" value="Type: MPI" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="64">
+          <mxGeometry y="28" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="66" value="Priority: 50" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="64">
+          <mxGeometry y="58" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="67" value="MaxReplicas: 50" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="64">
+          <mxGeometry y="88" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="68" value="MinReplicas: 10" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="64">
+          <mxGeometry y="118" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="69" value="AMD Support: true" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="64">
+          <mxGeometry y="148" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="70" value="Reduce Cost: false" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="64">
+          <mxGeometry y="178" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="71" value="Job1" style="swimlane;" vertex="1" parent="35">
+          <mxGeometry x="520" y="170" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="72" value="Type: MPI" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="71">
+          <mxGeometry y="28" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="73" value="Priority: 10" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="71">
+          <mxGeometry y="58" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="74" value="MaxReplicas: 30" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="71">
+          <mxGeometry y="88" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="75" value="MinReplicas: 10" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="71">
+          <mxGeometry y="118" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="76" value="AMD Support: true" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="71">
+          <mxGeometry x="5" y="148" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="77" value="Reduce Cost: true" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="71">
+          <mxGeometry y="178" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="78" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.layered_rect;dx=10;outlineConnect=0;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="35">
+          <mxGeometry x="540" y="480" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="79" value="AMD GPU&amp;nbsp;Nodes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="35">
+          <mxGeometry x="550" y="490" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="82" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.layered_rect;dx=10;outlineConnect=0;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="35">
+          <mxGeometry x="50" y="480" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="83" value="NVIDIA GPU&amp;nbsp;Nodes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="35">
+          <mxGeometry x="55" y="490" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="80" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.layered_rect;dx=10;outlineConnect=0;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="35">
+          <mxGeometry x="370" y="480" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="86" value="NVIDIA GPU&amp;nbsp;Nodes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="35">
+          <mxGeometry x="380" y="490" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=70;entryDy=0;entryPerimeter=0;" edge="1" parent="35" source="55" target="82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=70;entryDy=0;entryPerimeter=0;" edge="1" parent="35" source="55" target="42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=70;entryDy=0;entryPerimeter=0;" edge="1" parent="35" source="55" target="80">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="430" />
+              <mxPoint x="440" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=70;entryDy=0;entryPerimeter=0;" edge="1" parent="35" source="64" target="78">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="450" />
+              <mxPoint x="610" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=150;entryDy=35;entryPerimeter=0;" edge="1" parent="35" source="71" target="78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="97" value="Night Prefer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="96">
+          <mxGeometry x="-0.2776" relative="1" as="geometry">
+            <mxPoint x="1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="45" value="Users" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="225" y="-195" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.005;entryY=0.283;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="19" target="59">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="38" />
+              <mxPoint x="30" y="527" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
