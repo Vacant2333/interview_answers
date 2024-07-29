@@ -11,7 +11,7 @@
 <!--
 - 用户直接提交任务(Docker+Yaml).
 - 按任务消耗的资源来收费(预期费用+最终费用).
-- 支持弹性可伸缩任务(在可行的情况下用AMD的显卡+谷电).
+- 支持弹性可伸缩任务(在可行的情况下用 AMD 的显卡+谷电).
 - 降低颗粒度, 单显卡可以提供给多租户.
 - 去掉用户自己部署训练集群的成本.
 -->
@@ -31,7 +31,7 @@
 
 用户的镜像以及训练完成后的数据(Checkpoints, Report, Trained Model)由云存储负责.
 
-当然训练数据也不一定要放在Image中, 可能会导致镜像过大, 可以选择放到云存储后通过网络获得.
+当然训练数据也不一定要放在 Image 中, 可能会导致镜像过大, 可以选择放到云存储后通过网络获得.
 -->
 
 - Users submit their training tasks and some settings for running the tasks via **images**.
@@ -75,14 +75,14 @@ WorkerMaxReplicas: 40
 
 平台将在任务提交时给出一个预期的费用, 并且在运行完毕后给出最终费用.
 
-平台不应对完成时间做出承诺, 尤其是低优先级+ReduceCost的情况下.
+平台不应对完成时间做出承诺, 尤其是 低优先级+ReduceCost 的情况下.
 
-如果用户想最大化的节省成本, 那么它应该使用优先级为0, 并且ReduceCost = true, 来尽量使用谷电.
-在任务允许的情况下使用AMD的GPU来进行训练.
+如果用户想最大化的节省成本, 那么它应该使用优先级为0, 并且 ReduceCost = true, 来尽量使用谷电.
+在任务允许的情况下使用 AMD 的 GPU 来进行训练.
 -->
 
-- The resource consumption of the task (e.g., how much of a GPU's resources are used).
-- Price adjustment based on priority (the higher the priority, the greater the increase in the total price).
+- The resource consumption of the task (e.g., how many of a GPU's resources are used).
+- Price adjustment based on priority (the higher priority, the greater the increase in the total price).
 - The type of GPU used in the task (AMD GPUs are more cost-effective and performant, but NVIDIA is more widely supported; using AMD can reduce costs).
 - Use of off-peak electricity.
 
@@ -111,4 +111,4 @@ Such as research institutions, college students, and other users who lack resour
 have the hardware needed to meet requirements.
 
 For large enterprises, the costs we can reduce may seem negligible, and they may even consume
-all of the platform's resources, resulting in no GPUs available.
+all the platform's resources, resulting in no GPUs available.
